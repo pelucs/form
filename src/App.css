@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  transition: .2s;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root{
+  --bck: #121214;
+  --box: #201f24;
+  --primaria: #673ab7;
+  --secundaria: #5c34a4;
+  --positiva: #1ed760;
+  --negativa: #f44336;
+}
+
+body{
+  scroll-behavior: smooth;
+  background-color: var(--bck);
+}
+body::-webkit-scrollbar{
+  width: 5px;
+}
+body::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+  width: 5px;
+  background-color: #555;
+}
+
+.aviso{
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--primaria);
+}
+.aviso p{
+  text-align: left;
+  font-size: 12px;
+  color: #fff;
+}
+.aviso span ion-icon{
+  margin-top: 6px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.step-container{
+  width: 100%;
+  max-width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.step{
+  width: 100%;
+  padding: 30px 0 0 30px;
+}
+.box-flex{
+  display: flex;
+}
+.form > h1{
+  font-size: 2rem;
+  color: #fff;
+}
+.form > p{
+  font-size: 14px;
+  color: #888;
+}
+.form > p:first-of-type{
+  margin-bottom: 10px;
+}
+.form > p:last-of-type{
+  margin-top: 10px;
+}
+.form hr{
+  width: 100%;
+  height: 1px;
+  margin: 30px 0 20px 0;
+
+  border: 0;
+  background-color: #222;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.input-box label{
+  font-size: 15px;
+  color: #fff;
+}
+.input-box input{
+  width: 100%;
+  max-width: 400px;
+  height: 45px;
+  padding: 10px;
+  margin-top: 5px;
+
+  outline: none;
+  transition: .2s;
+
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+
+  font-size: 15px;
+  color: #fff;
+}
+.input-box input:focus{
+  border-color: var(--primaria);
+}
+
+.form button{
+  width: 200px;
+  height: 50px;
+  margin-top: 25px;
+
+  outline: none;
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 30px;
+  background-color: var(--primaria);
+
+  font-size: 15px;
+  color: #fff;
+}
+.form button:hover{
+  background-color: var(--secundaria);
+}
+
+@media screen and (max-width: 800px) {
+  .step-container{
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  .box-flex{
+    flex-direction: column;
+  }
+  .step{
+    padding: 30px 0;
+  }
+  .form > h1{
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .form > p{
+    font-size: 12px;
+  }
+  .form button{
+    width: 100%;
+  }
+}
